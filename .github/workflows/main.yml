@@ -7,17 +7,13 @@ on:
 
 jobs:
   deploy:
-
+    name: deploy
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v1
-      
+      - uses: actions/checkout@v1
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
-
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
