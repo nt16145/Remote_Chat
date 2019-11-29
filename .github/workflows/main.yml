@@ -1,4 +1,4 @@
-name: Remote Chat on Firebase
+name: deploy_to_firebase_hosting
 
 on:
   push:
@@ -18,6 +18,6 @@ jobs:
         uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
-          
+
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
