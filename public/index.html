@@ -117,7 +117,15 @@
         </div>
         <!-- skyway -->
         <div class="videos-container">
-          <video id="js-local-video" autoplay muted></video>
+          <video id="js-local-video" autoplay muted="true"></video>
+          <video id="js-remote-video" autoplay muted="true"></video>
+        </div>
+        <div class="controller-container">
+          <p>Your id: <span id="js-local-id">...</span></p>
+          <input type="text" placeholder="Call peer id..." id="js-remote-id">
+          <button id="js-call-trigger">Call</button>
+          <p>Currently in call with <span id="js-connected-id">...</span></p>
+          <button id="js-close-trigger">End call</button>
         </div>
       </div>
     </main>
@@ -135,6 +143,7 @@
   <script src="/__/firebase/init.js"></script>
   <script src="scripts/main.js"></script>
   <script src="scripts/skyway.js"></script>
+  <script src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
 </body>
 
 </html>
