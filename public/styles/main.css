@@ -45,6 +45,22 @@ main, #messages-card {
   padding: 0;
   margin: 0 auto;
 }
+video {
+    background: black;
+    float: left;
+}
+
+.videos-container {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    top: 0;
+}
+
+.videos-container video {
+    height: 100%;
+}
 .mdl-card__supporting-text {
   width: auto;
   height: 100%;
