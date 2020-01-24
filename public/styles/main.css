@@ -21,6 +21,28 @@ main, #messages-card {
   height: 100%;
   padding-bottom: 0;
 }
+
+video {
+    background: black;
+    float: left;
+}
+
+.videos-container {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    left: 0;
+    top: 0;
+}
+
+.videos-container video {
+    height: 50%;
+}
+
+.controller-container {
+    float: left;
+}
+
 #messages-card-container {
   height: calc(100% - 35px);
   padding-bottom: 0;
@@ -45,22 +67,7 @@ main, #messages-card {
   padding: 0;
   margin: 0 auto;
 }
-video {
-    background: black;
-    float: left;
-}
 
-.videos-container {
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    left: 0;
-    top: 0;
-}
-
-.videos-container video {
-    height: 100%;
-}
 
 .mdl-card__supporting-text {
   width: auto;
