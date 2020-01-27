@@ -1,11 +1,3 @@
-# Firebase Web Codelab - Final code
-
-This folder contains the final code of the [Firebase Web Codelab](https://codelabs.developers.google.com/codelabs/firebase-web/).
-
-You can use this app directly if you'd like to see the finished app but before you do follow the [Create a Firebase Project and Setup](https://codelabs.developers.google.com/codelabs/firebase-web/#3) step of the Codelab instructions
-
-If you'd like to follow the step by step codelab start with the [web-start](../web-start) directory.
-
 ## 半年かけてコンセプト（他者との比較点や新規点）を洗い出す
 
 - 研究という名目なのでそこがメインかなという感じで
@@ -51,3 +43,8 @@ If you'd like to follow the step by step codelab start with the [web-start](../w
     - 自分のソフトの優っている点
         - 作業の進捗が一目でわかる点
         - 残作業量の把握ができる点
+
+参考文献
+  - [チャット](https://qiita.com/codomo_pro/items/9e651e8cffaa90681426)
+  - [skyway](https://qiita.com/yusuke84/items/54dce88f9e896903e64f)
+
