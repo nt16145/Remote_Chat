@@ -334,7 +334,7 @@ var signOutButtonElement = document.getElementById('sign-out');
 var signInSnackbarElement = document.getElementById('must-signin-snackbar');
 
 // Saves message on form submit.
-messageFormElement.addEventListener('submit', onMessageFormSubmit);
+messageFormElement.addEventListener('submit', 　Submit);
 signOutButtonElement.addEventListener('click', signOut);
 signInButtonElement.addEventListener('click', signIn);
 
@@ -360,4 +360,3 @@ firebase.performance();
 
 // We load currently existing chat messages and listen to new ones.
 loadMessages();
-
