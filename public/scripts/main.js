@@ -334,7 +334,7 @@ var signOutButtonElement = document.getElementById('sign-out');
 var signInSnackbarElement = document.getElementById('must-signin-snackbar');
 
 // Saves message on form submit.
-messageFormElement.addEventListener('submit', 　Submit);
+messageFormElement.addEventListener('submit',onMessageFormSubmit);
 signOutButtonElement.addEventListener('click', signOut);
 signInButtonElement.addEventListener('click', signIn);
 
