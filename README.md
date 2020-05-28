@@ -1,6 +1,6 @@
-# 半年かけてコンセプト（他者との比較点や新規点）を洗い出す
-
-- 研究という名目なのでそこがメインかなという感じで
+# リモートワーク支援ソフト(サービス名:Reoffice)
+- This software includes the work that is distributed in the [Apache License 2.0.](http://www.apache.org/licenses/LICENSE-2.0)
+- このソフトウェアは、 [Apache 2.0ライセンス](http://www.apache.org/licenses/LICENSE-2.0)で配布されている製作物が含まれています。
 
 # リモートワーク支援ソフトの概要
 
