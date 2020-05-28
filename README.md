@@ -1,6 +1,5 @@
 # リモートワーク支援ソフト(サービス名:Reoffice)
-- Copyright 2020 Taichi Nakamura. All Rights Reserved.
-- Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
+- ライセンスに関して:[LICENSE.md](LICENSE.md)
 - This software includes the work that is distributed in the [Apache License 2.0.](http://www.apache.org/licenses/LICENSE-2.0)
 - このソフトウェアは、 [Apache 2.0ライセンス](http://www.apache.org/licenses/LICENSE-2.0)で配布されている製作物が含まれています。
 
