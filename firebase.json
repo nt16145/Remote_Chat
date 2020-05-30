@@ -6,7 +6,7 @@
     "rules": "storage.rules"
   },
   "hosting": {
-    "public": "./public",
+    "public": "./function",
     "rewrites": [{
       "source": "**",
       "function": "app"
