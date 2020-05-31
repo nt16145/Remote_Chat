@@ -1,0 +1,52 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Remote Office</title>
+  <link rel="stylesheet" href="styles/navbar.css">
+</head>
+
+<body>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="scripts/group_register.js"></script>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">TOP</a>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+      <div hidden class="m-2" id="user-pic"></div>
+      <div hidden class="m-2 font-weight-bold" id="user-name"></div>
+      <button hidden id="sign-out" class="btn btn-secondary m-2">
+        Sign-out
+      </button>
+      <button hidden id="sign-in" class="btn btn-secondary m-2" onclick="location.href='login.html'">
+        Sign-in with Google
+      </button>
+    </div>
+  </nav>
+  <form>
+    <div class="form-group m-4">
+      <label for="formGroupExampleInput">グループ名</label>
+      <input type="text" class="form-control" id="groupName" placeholder="グループ名">
+    </div>
+    <div class="form-group m-4">
+      <label for="formGroupExampleInput2">グループID</label>
+      <input type="text" class="form-control" id="groupId" placeholder="グループID">
+    </div>
+    <button type="button" class="btn btn-primary m-4">グループ作成</button>
+  </form>
+  <script src="/__/firebase/6.3.0/firebase-app.js"></script>
+  <script src="/__/firebase/6.3.0/firebase-auth.js"></script>
+  <script src="/__/firebase/6.3.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script type="text/javascript" src="scripts/navbar.js"></script>
+</body>
+
+</html>
