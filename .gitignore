@@ -1,2 +1,5 @@
-.firebase
 *.log
+*.pdf
+.*
+!.gitkeep
+!.gitignore

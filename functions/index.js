@@ -3,6 +3,7 @@ const express = require('express')
 const basicAuth = require('basic-auth-connect')
 const app = express()
 require('dotenv').config()
+console.log(process.env.PASS);
 
 app.all('/*', basicAuth(function (user, password) {
   return user === process.env.USERNAME && password === process.env.PASS;
