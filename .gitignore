@@ -1,2 +1,5 @@
 *.log
-.*
+.vscode
+.env
+.pdf
+.firebaserc
