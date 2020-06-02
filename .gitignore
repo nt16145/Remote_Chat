@@ -1,0 +1,5 @@
+*.log
+*.pdf
+.*
+!.gitkeep
+!.gitignore
