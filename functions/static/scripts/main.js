@@ -26,7 +26,7 @@ function signIn() {
 function signOut() {
   // Sign out of Firebase.
   firebase.auth().signOut();
-  window.location.href = 'login.html';
+  window.location.href = '/';
 }
 
 // Initiate firebase auth.
@@ -161,17 +161,7 @@ function onMediaFileSelected(event) {
 }
 
 // Triggered when the send new message form is submitted.
-function onMessageFormSubmit(e) {
-  e.preventDefault();
-  // Check that the user entered a message and is signed in.
-  if (messageInputElement.value && checkSignedInWithMessage()) {
-    saveMessage(messageInputElement.value).then(function() {
-      // Clear message text field and re-enable the SEND button.
-      resetMaterialTextfield(messageInputElement);
-      toggleButton();
-    });
-  }
-}
+
 
 // Triggers when the auth state change for instance when the user signs-in or signs-out.
 function authStateObserver(user) {
