@@ -10,47 +10,52 @@
 <body>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-  </script>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/">TOP</a>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
-      <div hidden class="m-2" id="user-pic"></div>
-      <div hidden class="m-2 font-weight-bold" id="user-name"></div>
-      <button hidden id="sign-out" class="btn btn-secondary m-2">
-        Sign-out
-      </button>
-      <button hidden id="sign-in" class="btn btn-secondary m-2" onclick="location.href='login.html'">
-        Sign-in with Google
-      </button>
-    </div>
-  </nav>
-  <table class="m-4 table table-bordered">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-      </tr>
-    </tbody>
-  </table>
+    </script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="row w-auto container-fluid">
+        <div class="col-md-auto float-left">
+            <a class="navbar-brand" href="/">TOP</a>
+        </div>
+        <div class="col-md-auto float-right">
+          <div class="container-fluid d-flex flex-row">
+            <div hidden class="m-2" id="user-pic"></div>
+            <div hidden class="m-2 font-weight-bold d-flex align-items-center" id="user-name"></div>
+            <button hidden id="sign-out" class="btn btn-secondary m-2">
+              Sign-out
+            </button>
+            <button hidden id="sign-in" class="btn btn-secondary m-2" onclick="location.href='login.html'">
+              Sign-in with Google
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  <div class="container-fluid">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>グループId</th>
+          <th>グループ名</th>
+        </tr>
+      </thead>
+      <template id="groupTemplete">
+        <tbody>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </template>
+    </table>
+  </div>
 
   <a href="group_register.html"><button type="button" class="btn btn-primary btn-lg m-4">グループ作成</button></a>
   <script src="/__/firebase/6.3.0/firebase-app.js"></script>

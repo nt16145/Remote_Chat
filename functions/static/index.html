@@ -18,16 +18,22 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
   </script>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/">TOP</a>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
-      <div hidden class="m-2" id="user-pic"></div>
-      <div hidden class="m-2 font-weight-bold" id="user-name"></div>
-      <button hidden id="sign-out" class="btn btn-secondary m-2">
-        Sign-out
-      </button>
-      <button hidden id="sign-in" class="btn btn-secondary m-2" onclick="location.href='login.html'">
-        Sign-in with Google
-      </button>
+    <div class="row w-auto container-fluid">
+      <div class="col-md-auto float-left">
+        <a class="navbar-brand" href="/">TOP</a>
+      </div>
+      <div class="col-md-auto float-right">
+        <div class="container-fluid d-flex flex-row">
+          <div hidden class="m-2" id="user-pic"></div>
+          <div hidden class="m-2 font-weight-bold d-flex align-items-center" id="user-name"></div>
+          <button hidden id="sign-out" class="btn btn-secondary m-2">
+            Sign-out
+          </button>
+          <button hidden id="sign-in" class="btn btn-secondary m-2" onclick="location.href='login.html'">
+            Sign-in with Google
+          </button>
+        </div>
+      </div>
     </div>
   </nav>
   <div class="jumbotron">
