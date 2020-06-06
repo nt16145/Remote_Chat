@@ -3,3 +3,5 @@
 .*
 !.gitkeep
 !.gitignore
+
+/node_module
