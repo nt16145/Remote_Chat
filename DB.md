@@ -9,6 +9,8 @@
 - /groups - collection
   - [groupId] - document
     - group_name - data
+    - group_id - data
+    - group_owner - data
     - group_member - data
 
 - messages - collection
