@@ -44,9 +44,16 @@ function initFirebaseAuth() {
               console.log('重複するgroupId無し:', querySnapshot)
               //this.validation.username = true
               var user_uid = user.uid;
-              ongroupFormSubmit(user_uid);
-            }
-            else {
+              firestore.collection('groups').where('groupOwner', '==', user_uid).get()
+                .then(snap => {
+                  console.log(snap.size);
+                  if (snap.size > 0) {
+                    window.alert('1ユーザにつき、グループ作成は１つまでしかできません')
+                  } else {
+                    ongroupFormSubmit(user_uid);
+                  }
+                });
+            } else {
               console.log('重複するgroupId有り', querySnapshot)
               //this.validation.username = false
               window.alert('他のグループと重複するグループIDが入力されています');

@@ -17,7 +17,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
   </script>
-  <script type="text/javascript" src="scripts/select_group.js"></script>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/">TOP</a>
     <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
@@ -31,12 +30,35 @@
       </button>
     </div>
   </nav>
+  <table class="m-4 table table-bordered">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+      </tr>
+    </tbody>
+  </table>
+
   <a href="group_register.html"><button type="button" class="btn btn-primary btn-lg m-4">グループ作成</button></a>
   <script src="/__/firebase/6.3.0/firebase-app.js"></script>
   <script src="/__/firebase/6.3.0/firebase-auth.js"></script>
   <script src="/__/firebase/6.3.0/firebase-firestore.js"></script>
   <script src="/__/firebase/init.js"></script>
   <script type="text/javascript" src="scripts/navbar.js"></script>
+  <script type="text/javascript" src="scripts/select_group.js"></script>
 </body>
 
 </html>
