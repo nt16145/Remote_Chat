@@ -4,4 +4,4 @@
 !.gitkeep
 !.gitignore
 
-functions/node_modules
+node_modules
