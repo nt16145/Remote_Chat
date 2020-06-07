@@ -1,7 +1,5 @@
 *.log
 *.pdf
-.*
-!.gitkeep
-!.gitignore
+.env
 
 node_modules
