@@ -15,6 +15,12 @@ service cloud.firestore {
                       && request.resource.data.imageUrl.matches('https?://.*'));
       allow delete: if false;
     }
+    match /groups/{groupId} {
+      allow read;
+      allow create;
+      allow write;
+
+    }
     // FCM Tokens:
     //   - Anyone can write their token.
     //   - Reading list of tokens is not allowed.
