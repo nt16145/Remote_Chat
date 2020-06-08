@@ -1,6 +1,6 @@
 var refer = document.referrer;
 console.log(refer);
-if (!refer.match(/select_group.html$/) && !refer.match(/group_register.html$/) && !refer.match(/group_register.html?$/)) {
+if (!refer.match(/select_group.html$/) && !refer.match(/group_register.html$/)) {
   window.location.href = 'not_allow.html'
 }
 

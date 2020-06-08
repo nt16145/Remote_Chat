@@ -1,5 +1,5 @@
 var refer = document.referrer;
-if (!refer.match(/login.html$/) && !refer.match(/group_register.html$/)) {
+if (!refer.match(/login.html$/) && !refer.match(/group_register.html$/) && !refer.match(/enter_group.html$/)) {
   window.location.href = 'not_allow.html'
 }
 
@@ -13,7 +13,6 @@ function getGrouplist() {
           querySnapshot.forEach(function (doc) {
             let template = document.querySelector('#groupTemplate');
             let tbody = document.querySelector("tbody");
-
             let clone = document.importNode(template.content, true);
             let th = clone.querySelector("th");
             let td = clone.querySelectorAll("td");
