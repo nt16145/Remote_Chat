@@ -21,6 +21,9 @@ function getGrouplist() {
             let template = document.querySelector("#groupTemplate");
             let tbody = document.querySelector("tbody");
             let clone = document.importNode(template.content, true);
+            clone.querySelector('button').addEventListener('click', function () {
+              window.location.href = "conf.html#!/sfu/" + doc.data().groupId;
+            });
             let th = clone.querySelector("th");
             let td = clone.querySelectorAll("td");
             td[0].textContent = doc.data().groupId;
@@ -38,6 +41,9 @@ function getGrouplist() {
             let template = document.querySelector("#groupTemplate");
             let tbody = document.querySelector("tbody");
             let clone = document.importNode(template.content, true);
+            clone.querySelector('button').addEventListener('click', function () {
+              window.location.href = "conf.html#!/sfu/" + doc.data().groupId;
+            });
             let th = clone.querySelector("th");
             let td = clone.querySelectorAll("td");
             td[0].textContent = doc.data().groupId;
@@ -65,4 +71,11 @@ document.addEventListener("click", function (e) {
       });
     console.log(a);
   }
+});
+
+$(function () {
+  $("#moveGroup").on("click", function () {
+    var no2 = $(this).closest("tr").children("td").first().text();
+    console.log("実行");
+  });
 });
