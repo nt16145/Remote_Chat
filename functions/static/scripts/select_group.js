@@ -14,7 +14,7 @@ function getGrouplist() {
     if (user) {
       firestore
         .collection("groups")
-        .where("groupOwner", "==", user.uid)
+        .where("groupOwner", "==", user.email)
         .get()
         .then(function (querySnapshot) {
           querySnapshot.forEach(function (doc) {
@@ -33,7 +33,7 @@ function getGrouplist() {
         });
       firestore
         .collection("groups")
-        .where("groupMember", "==", user.uid)
+        .where("groupMembers", "array-contains", user.email)
         .get()
         .then(function (querySnapshot) {
           console.log(querySnapshot.size);
