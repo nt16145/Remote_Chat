@@ -5,12 +5,12 @@ if (!refer.match(/select_group.html$/) && !refer.match(/group_register.html$/)) 
 }
 
 
-function ongroupFormSubmit(user_uid) {
+function ongroupFormSubmit(user_email) {
   console.log("実行");
   firestore.collection("groups").add({
     groupName: NameInputElement.value,
     groupId: IdInputElement.value,
-    groupOwner: user_uid
+    groupOwner: user_email
   })
     .then(function (docRef) {
       console.log("Document written with ID: ", docRef.id);
@@ -43,14 +43,14 @@ function initFirebaseAuth() {
             if (querySnapshot.empty) {
               console.log('重複するgroupId無し:', querySnapshot)
               //this.validation.username = true
-              var user_uid = user.uid;
-              firestore.collection('groups').where('groupOwner', '==', user_uid).get()
+              var user_email = user.email;
+              firestore.collection('groups').where('groupOwner', '==', user_email).get()
                 .then(snap => {
                   console.log(snap.size);
                   if (snap.size > 0) {
                     window.alert('1ユーザにつき、グループ作成は１つまでしかできません')
                   } else {
-                    ongroupFormSubmit(user_uid);
+                    ongroupFormSubmit(user_email);
                   }
                 });
             } else {

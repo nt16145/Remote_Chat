@@ -54,7 +54,7 @@
       <tr>
         <td></td>
         <td></td>
-        <td><button class="btn btn-primary">開く</button></td>
+        <td><button class="btn btn-primary" id="moveGroup" onclick="">開く</button></td>
       </tr>
     </template>
   </div>
@@ -67,6 +67,13 @@
   <script src="/__/firebase/init.js"></script>
   <script type="text/javascript" src="scripts/navbar.js"></script>
   <script type="text/javascript" src="scripts/select_group.js"></script>
+  <script>
+  $(function () {
+    $('#groupTemplate,#moveGroup').on('click', function() {
+      console.log("クリックされました");
+    })
+  });
+  </script>
 </body>
 
 </html>

@@ -27,7 +27,7 @@ function initFirebaseAuth() {
                 console.log('該当グループあり:', querySnapshot)
                 var result = window.confirm(doc.data().groupName + 'に参加します。\nよろしいですか？');
                 if (result) {
-                  firestore.collection("groups").doc(doc.id).update({ groupMember: user.uid }).then(docRef => {
+                  firestore.collection("groups").doc(doc.id).update({ groupMembers: firebase.firestore.FieldValue.arrayUnion(user.email) }).then(docRef => {
                     window.alert(doc.data().groupName + 'に参加しました！');
                     window.location.href = "select_group.html"
                   }).catch(error => {
