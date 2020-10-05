@@ -1,5 +1,4 @@
 *.log
 *.pdf
 .env
-
 node_modules

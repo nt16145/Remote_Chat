@@ -36,44 +36,22 @@
       </div>
     </div>
   </nav>
-  <p class="font-weight-bold m-4">参加グループ一覧</p>
-  <div class="container-fluid">
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>グループId</th>
-          <th>グループ名</th>
-          <th>#</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- add Templete -->
-      </tbody>
-    </table>
-    <template id="groupTemplate">
-      <tr>
-        <td></td>
-        <td></td>
-        <td><button class="btn btn-primary" id="moveGroup" onclick="">開く</button></td>
-      </tr>
-    </template>
-  </div>
-
-  <a href="group_register.html"><button type="button" class="btn btn-primary btn-lg m-4">グループ作成</button></a>
-  <a href="enter_group.html"><button type="button" class="btn btn-primary btn-lg m-4">グループに参加</button></a>
+  <form id="group-status">
+    <div class="form-group m-4">
+      <label for="formGroupExampleInput">グループID</label>
+      <input type="text" class="form-control" id="groupId" pattern="^[0-9A-Za-z]+$" required placeholder="グループ名">
+    </div>
+    <button id="submit" type="button" class="btn btn-primary m-4 btn-lg">グループ参加</button>
+  </form>
+  <button class="btn btn-primary mx-4 my-2 btn-lg" onclick="location.href='select_group.html'">
+    グループ選択に戻る
+  </button>
   <script src="/__/firebase/6.3.0/firebase-app.js"></script>
   <script src="/__/firebase/6.3.0/firebase-auth.js"></script>
   <script src="/__/firebase/6.3.0/firebase-firestore.js"></script>
   <script src="/__/firebase/init.js"></script>
   <script type="text/javascript" src="scripts/navbar.js"></script>
-  <script type="text/javascript" src="scripts/select_group.js"></script>
-  <script>
-  $(function () {
-    $('#groupTemplate,#moveGroup').on('click', function() {
-      console.log("クリックされました");
-    })
-  });
-  </script>
+  <script type="text/javascript" src="scripts/enter_group.js"></script>
 </body>
 
 </html>
