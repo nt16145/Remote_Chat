@@ -1,8 +1,8 @@
 service cloud.firestore {
-    match /databases/{database}/documents {
+  match /databases/{database}/documents {
     // Messages:
     //   - Anyone can read.
-    //   - Authenticated users can add andsages.
+    //   - Authenticated users can add and edit messages.
     //   - Validation: Check name is same as auth token and text length below 300 char or that imageUrl is a URL.
     //   - Deletes are not allowed.
     match /messages/{messageId} {
@@ -19,16 +19,20 @@ service cloud.firestore {
       allow read;
       allow write;
     }
-    match /messages/{messageId} {
+    match /message/{messageId} {
       allow read;
       allow write;
+      match /messages/{messageId} {
+      	allow read;
+        allow write;
+      }
     }
-    match /tasks/{taskId} {
+    match /task/{taskId} {
       allow read;
       allow write;
       match /tasks/{taskId} {
-        allow read;
-        allow write;
+      	allow read;
+      	allow write;
       }
     }
     // FCM Tokens:
@@ -40,4 +44,3 @@ service cloud.firestore {
     }
   }
 }
-
