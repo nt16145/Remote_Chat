@@ -1,12 +1,3 @@
-var refer = document.referrer;
-if (
-  !refer.match(/login.html$/) &&
-  !refer.match(/group_register.html$/) &&
-  !refer.match(/enter_group.html$/)
-) {
-  window.location.href = "not_allow.html";
-}
-
 var firestore = firebase.firestore();
 
 function getGrouplist() {
@@ -36,7 +27,6 @@ function getGrouplist() {
         .where("groupMembers", "array-contains", user.email)
         .get()
         .then(function (querySnapshot) {
-          console.log(querySnapshot.size);
           querySnapshot.forEach(function (doc) {
             let template = document.querySelector("#groupTemplate");
             let tbody = document.querySelector("tbody");
