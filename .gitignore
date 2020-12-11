@@ -2,3 +2,4 @@
 *.pdf
 .env
 node_modules
+*.cache

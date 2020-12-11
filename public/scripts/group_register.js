@@ -1,19 +1,16 @@
 var refer = document.referrer;
-console.log(refer);
 if (!refer.match(/select_group.html$/) && !refer.match(/group_register.html$/)) {
   window.location.href = 'not_allow.html'
 }
 
-
 function ongroupFormSubmit(user_email) {
-  console.log("実行");
   firestore.collection("groups").add({
     groupName: NameInputElement.value,
     groupId: IdInputElement.value,
     groupOwner: user_email
   })
     .then(function (docRef) {
-      console.log("Document written with ID: ", docRef.id);
+      console.log("グループの作成に成功->Document written with ID: ", docRef.id);
       window.alert('グループの作成に成功しました！');
       window.location.href = 'select_group.html'
     })
@@ -32,21 +29,31 @@ submitButtonElement.addEventListener('click', initFirebaseAuth);
 
 var firestore = firebase.firestore();
 
+const ratz = /[a-z]/, r0t9 = /[0-9]/;
+
+function isValidPassword(str) {
+  return ratz.test(str) || r0t9.test(str);
+}
+
 function initFirebaseAuth() {
   // Listen to auth state changes.
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
       // User is signed in.
+      if (!isValidPassword(IdInputElement.value) || IdInputElement.value.length < 4) {
+        console.log(isValidPassword(IdInputElement));
+        console.log(IdInputElement.value.length);
+        window.alert("グループIDの要件を満たしていません");
+        return;
+      }
       if (NameInputElement.value !== '' && IdInputElement.value !== '') {
         firestore.collection('groups').where('groupId', '==', IdInputElement.value).get()
           .then((querySnapshot) => {
             if (querySnapshot.empty) {
-              console.log('重複するgroupId無し:', querySnapshot)
               //this.validation.username = true
               var user_email = user.email;
               firestore.collection('groups').where('groupOwner', '==', user_email).get()
                 .then(snap => {
-                  console.log(snap.size);
                   if (snap.size > 0) {
                     window.alert('1ユーザにつき、グループ作成は１つまでしかできません')
                   } else {
@@ -54,13 +61,13 @@ function initFirebaseAuth() {
                   }
                 });
             } else {
-              console.log('重複するgroupId有り', querySnapshot)
+              console.log('重複するgroupId有り', querySnapshot);
               //this.validation.username = false
               window.alert('他のグループと重複するグループIDが入力されています');
             }
           })
           .catch((err) => {
-            console.log(err)
+            console.log(err);
           })
       } else {
         window.alert('未入力の欄があります');
