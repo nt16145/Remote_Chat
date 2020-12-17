@@ -42,8 +42,8 @@
       <input type="text" class="form-control" id="groupName" pattern="^[0-9A-Za-z]+$" required placeholder="グループ名">
     </div>
     <div class="form-group m-4">
-      <label for="formGroupExampleInput2">グループID(4文字以上、半角数,英小文字のみ)</label>
-      <input type="text" class="form-control" id="groupId" pattern="^[0-9a-z]+$" minlength="4" required
+      <label for="formGroupExampleInput2">グループID(4文字以上16文字以下、半角数、英小文字、アンダースコアのみ)</label>
+      <input type="text" class="form-control" id="groupId" pattern="^[0-9a-z_]{4,16}$" minlength="4" required
         placeholder="グループID">
     </div>
     <button id="submit" type="button" class="btn btn-primary m-4">グループ作成</button>

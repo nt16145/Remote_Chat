@@ -32,7 +32,13 @@ var firestore = firebase.firestore();
 const ratz = /[a-z]/, r0t9 = /[0-9]/;
 
 function isValidPassword(str) {
-  return ratz.test(str) || r0t9.test(str);
+  const check1 = str.match(/\W/);
+  const check2 = str.match(/[A-Z]/);
+  if (check1 != null || check2 != null) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function initFirebaseAuth() {
@@ -40,9 +46,7 @@ function initFirebaseAuth() {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
       // User is signed in.
-      if (!isValidPassword(IdInputElement.value) || IdInputElement.value.length < 4) {
-        console.log(isValidPassword(IdInputElement));
-        console.log(IdInputElement.value.length);
+      if (isValidPassword(IdInputElement.value) || IdInputElement.value.length < 4 || IdInputElement.value.length > 16) {
         window.alert("グループIDの要件を満たしていません");
         return;
       }
